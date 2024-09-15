@@ -6,7 +6,6 @@ import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { tiaraFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 function toTitleCase(str: string) {
   return str.replace(/\w\S*/g, function (txt) {
@@ -51,7 +50,6 @@ export default function EventsPage() {
                 
                 
                 (card.id !== "15" && card.id !== "14") ? (
-                  <Link href={`/events/${pathname.split("/")[2]}/${card.id}`} key={index}>
                     <CardContainer
                       key={index}
                       containerClassName="relative flex items-center justify-center transition-all duration-200 ease-linear"
@@ -70,7 +68,6 @@ export default function EventsPage() {
                         </CardItem>
                       </CardBody>
                     </CardContainer>
-                  </Link>
                 ) : (
                   <CardContainer
                     key={index}

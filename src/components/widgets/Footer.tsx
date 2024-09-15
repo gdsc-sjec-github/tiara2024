@@ -23,7 +23,7 @@ const Footer = () => {
         <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 ">
           © 2024 Developed by
           <a
-            href="https://gdscsjec.in/"
+            href="https://github.com/gdscsjec"
             className="text-white font-bold ml-1 hover:text-tiara_red transition-all"
             rel="noopener noreferrer"
             target="_blank"

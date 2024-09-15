@@ -3,7 +3,6 @@ import Lenis from "@/components/shared/lenis";
 import { LabIntro } from "@/components/story/intro";
 import { HeroParallax } from "@/components/widgets/Hero";
 import { tiaraAssetsPrefix } from "@/lib/utils";
-import RegisterNow from "../../components/ui/registernow";
 import EventsPage from "./events/page";
 import {Sponsers} from "@components/widgets/GoldSponser"
 
@@ -34,7 +33,7 @@ export default function Home() {
         <Sponsers/>
         <LabIntro />
         <EventsPage />
-        <RegisterNow />
+        {/* <RegisterNow /> */}
       </Lenis>
     </main>
   );

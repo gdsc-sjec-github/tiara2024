@@ -6,7 +6,7 @@ import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 import { tiaraFont } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
+import { cn, tiaraAssetsPrefix } from "@/lib/utils";
 
 interface NavItem {
   label: string;
@@ -30,10 +30,6 @@ const navItems: NavItem[] = [
     label: "about",
     href: "/about",
   },
-  {
-    label: "schedule",
-    href: "https://assets.tiarasjec.in/schedule.pdf",
-  }
 ];
 
 export function Header() {
@@ -86,36 +82,10 @@ export function Header() {
                   tiaraFont.className
                 )}
               >
-                <Link href="https://assets.tiarasjec.in/rulebook.pdf">
+                <Link href={`${tiaraAssetsPrefix}/rulebook.pdf`}>
                   rulebook
                 </Link>
               </Button>
-              {session && session.user ? (
-                <Button
-                  asChild
-                  className={cn(
-                    "tracking-widest flex items-center font-medium md:my-6",
-                    tiaraFont.className
-                  )}
-                >
-                  <Link href={"/register"}>register</Link>
-                </Button>
-              ) : (
-                <Button
-                  className={cn(
-                    "tracking-widest flex items-center font-medium md:my-6",
-                    tiaraFont.className
-                  )}
-                  onClick={async () =>
-                    await signIn("google", {
-                      callbackUrl: "/register",
-                      redirect: true,
-                    })
-                  }
-                >
-                  register now!
-                </Button>
-              )}
             </div>
           </div>
         </nav>

@@ -8,6 +8,11 @@ const nextConfig = {
         destination: "/coordinators/verify/:id",
         permanent: true,
       },
+      {
+        source: "/register",
+        destination: "/",
+        permanent: true,
+      }
     ];
   },
   images: {
@@ -15,7 +20,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "assets.tiarasjec.in",
+        hostname: "raw.githubusercontent.com",
         port: "",
         pathname: "/**",
       },
