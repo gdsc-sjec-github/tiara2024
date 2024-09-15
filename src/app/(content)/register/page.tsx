@@ -18,7 +18,7 @@ import { UserRole } from "@prisma/client";
 import { signIn, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
 
-export const maxDuration = 300;
+// export const maxDuration = 300;
 
 function processEvents(
   category: string,
